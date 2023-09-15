@@ -26,6 +26,9 @@ path_prefix_results = "path/to/save/segmentation/results"
 Preprocess validation images with gaussian filtering -> z-score -> 5 pca
 """
 
+# Indices are arrays with 3 columns (x, y, and z coordinate) and rows corresponding to foreground voxels. 
+# TACs are 4D arrays including the radioactivity levels of the image (last dim is time).
+
 # FDPA
 for id_fdpa in images_fdpa:
     tacs_raw_fdpa = np.load(path_prefix_raw_data + "FDPA/" + id_fdpa + "_TACs_raw.npy")  # Modify to match your file names
